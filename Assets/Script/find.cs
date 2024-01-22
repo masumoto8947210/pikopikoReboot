@@ -5,17 +5,17 @@ using UnityEngine;
 public class find : MonoBehaviour
 {
     public static find instance;
-    public bool isTouched;
+    public bool Touch;
     // Start is called before the first frame update
     void Start()
     {
-        isTouched = false;
+        Touch = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        isTouched = false;
+        Touch = false;
     }
 
     public void Awake()
@@ -26,11 +26,11 @@ public class find : MonoBehaviour
         }
     }
 
-    void OnColliderStay(Collider other)
+    private void OnColliderStay(Collider other)
     {
         if (other.gameObject.tag == "tp")
         {
-            isTouched = true;
+            Touch = true;
         }
 
     }

@@ -13,7 +13,7 @@ public class test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(find.instance.isTouched)
+        if(find.instance.Touch)
             Debug.Log("true‚Å‚·");
     }
 }

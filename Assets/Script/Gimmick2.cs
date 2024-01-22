@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Gimmick2 : MonoBehaviour
 {
+    public GameObject player;
+    public Transform tp_pea;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,9 +15,9 @@ public class Gimmick2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(find.instance.isTouched)
+        if(find.instance.Touch && Input.GetKey(KeyCode.Q))
         {
-            Debug.Log("true‚Å‚·");
+            player.transform.position = tp_pea.position;
         }
     }
 }

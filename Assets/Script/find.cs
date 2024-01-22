@@ -7,16 +7,6 @@ public class find : MonoBehaviour
     public static find instance;
     public bool Touch;
     // Start is called before the first frame update
-    void Start()
-    {
-        Touch = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Touch = false;
-    }
 
     public void Awake()
     {
@@ -26,11 +16,31 @@ public class find : MonoBehaviour
         }
     }
 
-    private void OnColliderStay(Collider other)
+    void Start()
+    {
+        Touch = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "tp")
         {
             Touch = true;
+        }
+  
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "tp")
+        {
+            Touch = false;
         }
 
     }

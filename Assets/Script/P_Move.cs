@@ -47,6 +47,8 @@ public class P_Move : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        isGround = ground.IsGround();
+        isHead = head.IsGround();
         float xSpeed = GetXSpeed();
         float ySpeed = GetYSpeed();
 
@@ -131,6 +133,18 @@ public class P_Move : MonoBehaviour
         }
         return ySpeed;
     }
+
+
+
+
+
+
+
+
+
+
+
+
 
     private float GetXSpeed()
     {

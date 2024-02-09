@@ -15,7 +15,7 @@ public class Return : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.transform.position.y < 5)
+        if (player.transform.position.y < 0)
         {
             player.transform.position = new Vector3(pos.x, pos.y, pos.z);
         }

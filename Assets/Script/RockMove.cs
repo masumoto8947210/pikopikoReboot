@@ -7,7 +7,7 @@ public class RockMove : MonoBehaviour
     public double GravityDistance = 0.1; 
     private Vector3 originalPosition;
     private Rigidbody rb;
-    private bool PlayerTouch = false;
+    public bool PlayerTouch = false;
     public float additionalGravity = 10f; // í«â¡ÇÃèdóÕÇÃã≠Ç≥
 
     private void Start()

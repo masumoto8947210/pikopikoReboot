@@ -14,12 +14,10 @@ public class GoHowTO : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void OnHowToButtonClicked()
-    {
-        SceneManager.LoadScene("HowTo");
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("HowTo");
+        }
     }
 
 }

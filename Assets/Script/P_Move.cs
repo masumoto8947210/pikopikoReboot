@@ -27,6 +27,7 @@ public class P_Move : MonoBehaviour
     private Animator anim = null;
     private Rigidbody rb = null;
     private BoxCollider boxcol = null;
+    private AudioSource source;
     private bool isGround = false;
     private bool isJump = false;
     private bool isRun = false;
@@ -43,11 +44,13 @@ public class P_Move : MonoBehaviour
     private float beforeKey = 0.0f;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         boxcol = GetComponent<BoxCollider>();
+        source= GetComponent<AudioSource>();    
     }
 
     // Update is called once per frame
@@ -249,8 +252,15 @@ public class P_Move : MonoBehaviour
                 isGrabJump = true;
             }
 
+           
  
         }
+
+        if(other.gameObject.tag == "Houseki")
+        {
+            source.Play();
+        }
     }
+
 
 }

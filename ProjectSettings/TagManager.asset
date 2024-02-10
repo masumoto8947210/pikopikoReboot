@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - Rope
   - Kinoko
+  - Houseki
+  - Tobira
   layers:
   - Default
   - TransparentFX

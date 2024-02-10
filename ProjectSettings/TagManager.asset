@@ -4,10 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+
   - Rope
   - Houseki
   - Tobira
   - Kinoko
+
+  - tp
+  - tp_pea
+  - Ground
+
   layers:
   - Default
   - TransparentFX
@@ -15,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - NoLight
   - 
   - 
   - 

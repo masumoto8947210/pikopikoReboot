@@ -4,25 +4,31 @@ using UnityEngine;
 
 public class Gimmick2 : MonoBehaviour
 {
+    public AudioClip audioClip;
+    AudioSource audioSource;
     public GameObject player;
-    public Transform tp_pea;
-    public Transform tp;
+    public Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource =
+            gameObject.GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(find.instance.Tp && Input.GetKeyDown(KeyCode.Q))
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+
+        if (find.instance.Tp && Input.GetKeyDown(KeyCode.K))
         {
-            player.transform.position = tp_pea.position;
-        }
-        if (find.instance.Tp_pea && Input.GetKeyDown(KeyCode.Q))
-        {
-            player.transform.position = tp.position;
+            player.transform.position = new Vector3(pos.x, pos.y, pos.z);
+            audioSource.PlayOneShot(audioClip);
         }
     }
+
 }

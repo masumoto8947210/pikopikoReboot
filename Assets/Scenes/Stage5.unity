@@ -1188,7 +1188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2
+      value: -8.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1196,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21
+      value: 20.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1976,7 +1976,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1403575427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.84, y: 12.15, z: -5.95}
+  m_LocalPosition: {x: 23.84, y: 14.7, z: -12.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2170,7 +2170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578900236}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
-  m_LocalPosition: {x: 23.8, y: 15.2, z: 32.5}
+  m_LocalPosition: {x: 23.8, y: 16, z: 32.5}
   m_LocalScale: {x: 100, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2425,8 +2425,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824223039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: -1, z: 21.2}
-  m_LocalScale: {x: 70, y: 1, z: 8}
+  m_LocalPosition: {x: 12, y: -1.98, z: 21.2}
+  m_LocalScale: {x: 70, y: 3, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 396877933}
@@ -2446,7 +2446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8631abc3487f5243a69a1410a192f0b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.1
+      value: 26.4
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d8631abc3487f5243a69a1410a192f0b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2527,9 +2527,9 @@ MonoBehaviour:
   maxDistance: 0.01
   GravityDistance: 0.1
   PlayerTouch: 0
-  additionalGravity: 200
-  maxResetPosition: 0
-  minResetPosition: 0
+  additionalGravity: 0
+  maxResetPosition: 60
+  minResetPosition: -10
 --- !u!138 &1991672346
 FixedJoint:
   m_ObjectHideFlags: 0

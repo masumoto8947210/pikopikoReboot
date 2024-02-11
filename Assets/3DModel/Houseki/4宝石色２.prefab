@@ -62,8 +62,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Houseki5: {fileID: 2184302854356528166, guid: 766f8c615260eda4db4527889b6b3900, type: 3}
   Tobira4: {fileID: 3584857190485162557, guid: 7719f1b828d106148acc4b745157ccaf, type: 3}
-  instantX: -31.5
-  instantY: 12
+  instantX: -26
+  instantY: 11
   clips: []
 --- !u!1 &4839383646933665939
 GameObject:

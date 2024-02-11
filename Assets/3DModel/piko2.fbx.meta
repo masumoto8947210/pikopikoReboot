@@ -16,7 +16,8 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+      human bone 'RightUpperLeg' not found\n"
     rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
@@ -24,7 +25,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -80,7 +81,147 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: piko2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body
+      parentName: piko2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: hair.curve.001
+      parentName: piko2(Clone)
+      position: {x: -0.013355654, y: 2.0239437, z: 0.08574639}
+      rotation: {x: -0.7063744, y: -0.032173753, z: -0.03217375, w: 0.70637447}
+      scale: {x: 126.12704, y: 103.74311, z: 102.56165}
+    - name: hair.curve.002
+      parentName: piko2(Clone)
+      position: {x: -0.0005784035, y: 2.0266054, z: 0.087366216}
+      rotation: {x: -0.6854944, y: -0.17348634, z: -0.17348635, w: 0.68549436}
+      scale: {x: 100, y: 100, z: 100}
+    - name: hair.curve.003
+      parentName: piko2(Clone)
+      position: {x: -0.0005784035, y: 2.079235, z: 0.087366216}
+      rotation: {x: -0.65880543, y: -0.25685674, z: -0.25685677, w: 0.65880543}
+      scale: {x: 100, y: 100, z: 100}
+    - name: hair.curve.004
+      parentName: piko2(Clone)
+      position: {x: -0.0005784035, y: 1.990287, z: 0.087366216}
+      rotation: {x: -0.6979339, y: 0.11352608, z: 0.11352608, w: 0.69793403}
+      scale: {x: 106.9435, y: 105.8224, z: 105.82241}
+    - name: hair.curve.000
+      parentName: hair.curve.004
+      position: {x: -0.0002638505, y: -0.000493218, z: 0.0000029850005}
+      rotation: {x: 0, y: 0, z: -0.12644885, w: 0.99197316}
+      scale: {x: 1.0054812, y: 1.0054812, z: 1.0054814}
+    - name: hair.curve.005
+      parentName: piko2(Clone)
+      position: {x: -0.0005784035, y: 2.0155613, z: 0.087366216}
+      rotation: {x: -0.60772866, y: -0.3614775, z: -0.3614776, w: 0.6077284}
+      scale: {x: 101.71166, y: 100.65559, z: 98.61849}
+    - name: hair.curve.006
+      parentName: piko2(Clone)
+      position: {x: -0.0005784035, y: 1.990287, z: 0.087366216}
+      rotation: {x: -0.6283892, y: -0.32423314, z: -0.32423314, w: 0.62838906}
+      scale: {x: 114.000786, y: 100, z: 99.03964}
+    - name: hair.curve.007
+      parentName: piko2(Clone)
+      position: {x: -0.0005784035, y: 1.990287, z: 0.087366216}
+      rotation: {x: -0.67938626, y: 0.19604692, z: 0.19604693, w: 0.67938614}
+      scale: {x: 116.21708, y: 100.00001, z: 100}
+    - name: hair.curve.008
+      parentName: piko2(Clone)
+      position: {x: 0.0013707419, y: 1.9633545, z: 0.089148015}
+      rotation: {x: -0.635745, y: 0.3095615, z: 0.3095615, w: 0.635745}
+      scale: {x: 124.00576, y: 100.78874, z: 100.788734}
+    - name: hair.curve.009
+      parentName: piko2(Clone)
+      position: {x: 0.001894181, y: 1.9633545, z: 0.08829373}
+      rotation: {x: -0.57088083, y: 0.41724715, z: 0.41724738, w: 0.57088053}
+      scale: {x: 145.05011, y: 99.99999, z: 100}
+    - name: hair.mesh.000
+      parentName: piko2(Clone)
+      position: {x: 0.002045069, y: 1.9955593, z: 0.08766845}
+      rotation: {x: -0.51429355, y: 0.4852858, z: 0.4852863, w: 0.5142929}
+      scale: {x: 117.567345, y: 100.00002, z: 100}
+    - name: hair.curve.010
+      parentName: piko2(Clone)
+      position: {x: 0.0018126934, y: 2.00016, z: 0.08582671}
+      rotation: {x: 0.48539886, y: 0.51418674, z: 0.51418513, w: -0.48540044}
+      scale: {x: 99.99999, y: 99.99999, z: 100}
+    - name: hair.curve.011
+      parentName: piko2(Clone)
+      position: {x: 0.0020499912, y: 1.9958901, z: 0.08628041}
+      rotation: {x: 0.4371412, y: 0.55579466, z: 0.5557941, w: -0.4371416}
+      scale: {x: 100.00001, y: 100.00001, z: 100}
+    - name: hair.curve.012
+      parentName: piko2(Clone)
+      position: {x: 0.0044670445, y: 1.9884758, z: 0.08547501}
+      rotation: {x: 0.4564115, y: 0.54008216, z: 0.5400813, w: -0.4564122}
+      scale: {x: 119.81066, y: 181.1406, z: 100}
+    - name: hair.curve.013
+      parentName: piko2(Clone)
+      position: {x: 0.0047717267, y: 1.9925267, z: 0.08672644}
+      rotation: {x: 0.38859096, y: 0.5907597, z: 0.5907599, w: -0.38859084}
+      scale: {x: 119.81066, y: 181.1406, z: 100}
+    - name: hair.curve.014
+      parentName: piko2(Clone)
+      position: {x: 0.0047765393, y: 1.9976954, z: 0.08796438}
+      rotation: {x: 0.3181544, y: 0.63148856, z: 0.6314885, w: -0.31815442}
+      scale: {x: 119.81067, y: 181.1406, z: 100}
+    - name: hair.curve.015
+      parentName: piko2(Clone)
+      position: {x: 0.004422717, y: 2.0063488, z: 0.08937172}
+      rotation: {x: 0.23022255, y: 0.66857886, z: 0.6685787, w: -0.23022266}
+      scale: {x: 119.81066, y: 181.14058, z: 100}
+    - name: hair.curve.016
+      parentName: piko2(Clone)
+      position: {x: 0.0037427177, y: 2.012262, z: 0.0905851}
+      rotation: {x: 0.142003, y: 0.69270134, z: 0.69270134, w: -0.14200298}
+      scale: {x: 119.81066, y: 181.1406, z: 100}
+    - name: hair.curve.017
+      parentName: piko2(Clone)
+      position: {x: 0.002643077, y: 1.9892651, z: 0.060509767}
+      rotation: {x: 0.040523697, y: 0.70594466, z: 0.7059446, w: -0.040523697}
+      scale: {x: 119.81066, y: 181.14061, z: 100}
+    - name: hair.curve.018
+      parentName: piko2(Clone)
+      position: {x: 0.0014249455, y: 1.9819473, z: 0.0923682}
+      rotation: {x: -0.051296137, y: 0.7052437, z: 0.7052437, w: 0.051296137}
+      scale: {x: 119.81067, y: 181.1406, z: 100}
+    - name: hair.curve.019
+      parentName: piko2(Clone)
+      position: {x: 0.0000020159641, y: 1.9829816, z: 0.09272311}
+      rotation: {x: -0.14679264, y: 0.69170225, z: 0.69170225, w: 0.14679264}
+      scale: {x: 119.81067, y: 181.1406, z: 100}
+    - name: hair.curve.020
+      parentName: piko2(Clone)
+      position: {x: -0.0012256815, y: 1.9716119, z: 0.09271545}
+      rotation: {x: -0.22463976, y: 0.6704752, z: 0.6704752, w: 0.22463974}
+      scale: {x: 119.81066, y: 181.1406, z: 100}
+    - name: hair.curve.021
+      parentName: piko2(Clone)
+      position: {x: -0.0024829598, y: 1.93445, z: 0.092406645}
+      rotation: {x: -0.30356118, y: 0.6386319, z: 0.6386319, w: 0.30356118}
+      scale: {x: 119.81067, y: 181.14061, z: 100}
+    - name: uniform
+      parentName: piko2(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 105.246315, y: 105.246315, z: 105.246315}
+    - name: "\u30A8\u30F3\u30D7\u30C6\u30A3"
+      parentName: piko2(Clone)
+      position: {x: -0.9575329, y: -0.41384894, z: -7.984851}
+      rotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+      scale: {x: 100, y: 115.53099, z: 100}
+    - name: "\u30A8\u30F3\u30D7\u30C6\u30A3.001"
+      parentName: piko2(Clone)
+      position: {x: 8.025424, y: -0.28401405, z: 1.2740057}
+      rotation: {x: 0.000000015454313, y: -0.70710677, z: 0.000000015454312, w: 0.7071068}
+      scale: {x: 100, y: 121.05924, z: 100}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -91,13 +232,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0

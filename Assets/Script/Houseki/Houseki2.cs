@@ -23,7 +23,7 @@ public class Houseki2 : MonoBehaviour
             Tobira1 = GameObject.FindGameObjectWithTag("Tobira");
             Destroy(Tobira1);
             Instantiate(Houseki3, new Vector3(instantX, instantY, 37), Houseki3.transform.rotation);
-            Instantiate(Tobira2, new Vector3(-22, -11.5f, 40), Tobira2.transform.rotation);
+            Instantiate(Tobira2, new Vector3(-17.5f, -11.5f, 40), Tobira2.transform.rotation);
             Destroy(this.gameObject);
           
         }

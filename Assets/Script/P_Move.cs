@@ -194,11 +194,13 @@ public class P_Move : MonoBehaviour
         {
             dashTime += Time.deltaTime;
             xSpeed = speed;
+            this.transform.rotation = Quaternion.Euler(0, 90, 0);
         }
         else if (Input.GetKey(KeyCode.F) && !isGrab)
         {
             dashTime += Time.deltaTime;
             xSpeed = -speed;
+            this.transform.rotation = Quaternion.Euler(0, -90, 0);
         }
         else
         {

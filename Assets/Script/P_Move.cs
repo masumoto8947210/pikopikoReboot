@@ -145,7 +145,27 @@ public class P_Move : MonoBehaviour
             }
         }
         //’n–Ê‚É‚¢‚é‚Æ‚«
-        else if (isGround || isGrabJump)
+        else if (isGround )
+        {
+            isHighJump = false;
+            isLowJump = false;
+            isGrabJump = false;
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                ySpeed = jumpSpeed;
+                jumpPos = transform.position.y;
+                isJump = true;
+                isGrabJump = false;
+                isGrab = false;
+                jumpTime = 0.0f;
+            }
+            else
+            {
+                isJump = false;
+            }
+        }
+        else if (isGrabJump)
         {
             isHighJump = false;
             isLowJump = false;
@@ -158,12 +178,10 @@ public class P_Move : MonoBehaviour
                 isGrabJump = false;
                 isGrab = false;
                 jumpTime = 0.0f;
-                anim.SetBool("jump", true);
             }
             else
             {
                 isJump = false;
-                anim.SetBool("jump", false);
             }
         }
         //ƒWƒƒƒ“ƒv’†

@@ -51,7 +51,7 @@ public class P_Move : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         boxcol = GetComponent<BoxCollider>();
         anim = GetComponent<Animator>();
-        source = GetComponent<AudioSource>();    
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -64,7 +64,7 @@ public class P_Move : MonoBehaviour
 
         if (xSpeed == 0)
         {
-            anim.SetBool("walk" , false);
+            anim.SetBool("walk", false);
         }
         else
         {
@@ -74,13 +74,15 @@ public class P_Move : MonoBehaviour
 
         rb.velocity = new Vector3(xSpeed, ySpeed, 0.0f);
     }
+
+
     private float GetYSpeed()
     {
         float ySpeed = -gravity;
 
         if (isGrab)
         {
-            ySpeed = 0f;         
+            ySpeed = 0f;
         }
 
 
@@ -120,28 +122,8 @@ public class P_Move : MonoBehaviour
                 isLowJump = false;
                 jumpTime = 0.0f;
             }
-        }
-        //地面にいるとき
-        else if (isGround || isGrabJump)
-        {
 
-            if (Input.GetKey(KeyCode.Space))
-            {
-                ySpeed = jumpSpeed;
-                jumpPos = transform.position.y;
-                isJump = true;
-                isGrabJump = false;
-                isGrab = false; 
-                jumpTime = 0.0f;
-                anim.SetBool("jump", true);
-            }
-            else
-            {
-                isJump = false;
-                anim.SetBool("jump", false);
-            }
         }
-        //ジャンプ中
         else if (isJump && !isGrab)
         {
             bool pushUpKey = Input.GetKey(KeyCode.Space);
@@ -152,13 +134,40 @@ public class P_Move : MonoBehaviour
             {
                 ySpeed = jumpSpeed;
                 jumpTime += Time.deltaTime;
+                isGrab = false;
+                isGrabJump = false;
             }
             else
             {
                 isJump = false;
                 jumpTime = 0.0f;
+                isGrab = false;
             }
         }
+        //地面にいるとき
+        if (isGround || isGrabJump)
+        {
+            isHighJump = false;
+            isLowJump = false;
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                ySpeed = jumpSpeed;
+                jumpPos = transform.position.y;
+                isJump = true;
+                isGrabJump = false;
+                isGrab = false;
+                jumpTime = 0.0f;
+                anim.SetBool("jump", true);
+            }
+            else
+            {
+                isJump = false;
+                anim.SetBool("jump", false);
+            }
+        }
+        //ジャンプ中
+
 
 
         if (isJump)
@@ -211,72 +220,6 @@ public class P_Move : MonoBehaviour
         xSpeed *= dashCurve.Evaluate(dashTime);
         return xSpeed;
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.collider.tag == "Kinoko")
-        {
-            float stepOnHeight = (boxcol.size.y * (stepOnRate / 100f));
-
-            float judgePos = transform.position.y - (boxcol.size.y / 2f) + stepOnHeight;
-
-            foreach (ContactPoint p in collision.contacts)
-            {
-                if (p.point.y < judgePos)
-                {
-                    isHighJump = false;
-                    isLowJump = false;  
-                    if (Input.GetKey(KeyCode.Space))
-                    {
-                        jumpPos = transform.position.y;
-                        isHighJump = true;
-                        isJump = false;
-                        jumpTime = 0.0f;
-                    }
-
-                    else
-                    {
-                        jumpPos = transform.position.y;
-                        isLowJump = true;
-                        isJump = false;
-                        jumpTime = 0.0f;
-                    }
-                }
-
-            }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Rope")
-        {
-            transform.position = new Vector3(other.gameObject.transform.position.x, this.transform.position.y, this.transform.position.z);
-            isJump = false;
-            isHighJump=false;
-            isLowJump=false;
-            isGrab = true;
-        }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.tag == "Rope")
-        {
-        
-            if(!Input.GetKey(KeyCode.Space) || !isJump ) 
-            {
-                isGrabJump = true;
-            }
-
-           
- 
-        }
-
-        if(other.gameObject.tag == "Houseki")
-        {
-            source.Play();
-        }
-    }
-
-
 }
+
+    

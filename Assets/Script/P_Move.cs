@@ -145,7 +145,7 @@ public class P_Move : MonoBehaviour
             }
         }
         //’n–Ê‚É‚¢‚é‚Æ‚«
-        if (isGround || isGrabJump)
+        else if (isGround || isGrabJump)
         {
             isHighJump = false;
             isLowJump = false;
@@ -220,6 +220,75 @@ public class P_Move : MonoBehaviour
         xSpeed *= dashCurve.Evaluate(dashTime);
         return xSpeed;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Kinoko")
+        {
+            float stepOnHeight = (boxcol.size.y * (stepOnRate / 100f));
+
+            float judgePos = transform.position.y - (boxcol.size.y / 2f) + stepOnHeight;
+
+            foreach (ContactPoint p in collision.contacts)
+            {
+                if (p.point.y < judgePos)
+                {
+                    isHighJump = false;
+                    isLowJump = false;
+                    if (Input.GetKey(KeyCode.Space))
+                    {
+                        jumpPos = transform.position.y;
+                        isHighJump = true;
+                        isJump = false;
+                        jumpTime = 0.0f;
+                    }
+
+                    else
+                    {
+                        jumpPos = transform.position.y;
+                        isLowJump = true;
+                        isJump = false;
+                        jumpTime = 0.0f;
+                    }
+                }
+
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Rope")
+        {
+            transform.position = new Vector3(other.gameObject.transform.position.x, this.transform.position.y, this.transform.position.z);
+            isJump = false;
+            isHighJump = false;
+            isLowJump = false;
+            isGrab = true;
+        }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Rope")
+        {
+
+            if (!Input.GetKey(KeyCode.Space) || !isJump)
+            {
+                isGrabJump = true;
+            }
+
+
+
+        }
+
+        if (other.gameObject.tag == "Houseki")
+        {
+            source.Play();
+        }
+    }
+
+
 }
+
 
     

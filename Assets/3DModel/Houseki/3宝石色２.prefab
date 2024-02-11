@@ -63,7 +63,7 @@ MonoBehaviour:
   Houseki4: {fileID: 1251937210625517184, guid: 2e2cd56e4d5ed7443bd9f1e79a4404fd, type: 3}
   Tobira3: {fileID: 7786751220737743426, guid: 1ac39c8222c64cc49b47b6c7db004c53, type: 3}
   instantX: 1.5
-  instantY: 13
+  instantY: 10
   clips: []
 --- !u!1 &8889475175050087448
 GameObject:

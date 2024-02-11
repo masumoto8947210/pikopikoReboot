@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tobira5: {fileID: 4611246799003399914, guid: 98eb4d6b59eb5a640a22c374f6bffe1d, type: 3}
+  Yajirusi: {fileID: 7116400901231357672, guid: 715661fca99716b41bf5f52140a4f80e, type: 3}
 --- !u!65 &7705687698104527142
 BoxCollider:
   m_ObjectHideFlags: 0

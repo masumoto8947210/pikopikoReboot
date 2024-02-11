@@ -17,11 +17,11 @@ PrefabInstance:
       objectReference: {fileID: 4125031403485372813, guid: 7164c6439977da947ace2770b402fad9, type: 3}
     - target: {fileID: 4618034977311767120, guid: 1390b30263c48234ea86581a0ac70082, type: 3}
       propertyPath: instantX
-      value: 24.5
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4618034977311767120, guid: 1390b30263c48234ea86581a0ac70082, type: 3}
       propertyPath: instantY
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4998513599431723280, guid: 1390b30263c48234ea86581a0ac70082, type: 3}
       propertyPath: m_RootOrder

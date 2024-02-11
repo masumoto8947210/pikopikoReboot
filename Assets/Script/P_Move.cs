@@ -50,7 +50,8 @@ public class P_Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         boxcol = GetComponent<BoxCollider>();
-        source= GetComponent<AudioSource>();    
+        anim = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();    
     }
 
     // Update is called once per frame
@@ -60,6 +61,16 @@ public class P_Move : MonoBehaviour
         isHead = head.IsGround();
         float xSpeed = GetXSpeed();
         float ySpeed = GetYSpeed();
+
+        if (xSpeed == 0)
+        {
+            anim.SetBool("walk" , false);
+        }
+        else
+        {
+            anim.SetBool("walk", true);
+        }
+
 
         rb.velocity = new Vector3(xSpeed, ySpeed, 0.0f);
     }
@@ -83,6 +94,7 @@ public class P_Move : MonoBehaviour
             {
                 ySpeed = highjumpSpeed;
                 jumpTime += Time.deltaTime;
+                anim.SetBool("jump", true);
             }
             else
             {
@@ -99,6 +111,7 @@ public class P_Move : MonoBehaviour
 
             if (canHeight && canTime && !isHead)
             {
+                anim.SetBool("jump", true);
                 ySpeed = lowjumpSpeed;
                 jumpTime += Time.deltaTime;
             }
@@ -111,6 +124,7 @@ public class P_Move : MonoBehaviour
         //’n–Ê‚É‚¢‚é‚Æ‚«
         else if (isGround || isGrabJump)
         {
+
             if (Input.GetKey(KeyCode.Space))
             {
                 ySpeed = jumpSpeed;
@@ -119,10 +133,12 @@ public class P_Move : MonoBehaviour
                 isGrabJump = false;
                 isGrab = false; 
                 jumpTime = 0.0f;
+                anim.SetBool("jump", true);
             }
             else
             {
                 isJump = false;
+                anim.SetBool("jump", false);
             }
         }
         //ƒWƒƒƒ“ƒv’†

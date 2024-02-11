@@ -5,11 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class Treasure : MonoBehaviour
 {
+    int P;
+    int B;
+    int H;
     public AudioClip collisionSound; // è’ìÀéûÇ…çƒê∂Ç∑ÇÈâπê∫ÉtÉ@ÉCÉã
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
+        P = Item1.score1;
+        B = Item2.score2;
+        H = Item3.score3;
         audioSource = GetComponent<AudioSource>();
         audioSource.clip = collisionSound;
     }
@@ -27,6 +33,28 @@ public class Treasure : MonoBehaviour
         {
             audioSource.Play();
         }
-        SceneManager.LoadScene("END");
+        if(P == 1 && H == 1 && B == 1)
+            SceneManager.LoadScene("END_FULL");
+
+        if(P == 1 && B == 1 && H != 1)
+            SceneManager.LoadScene("END_B_P");
+
+        if(B == 1 && H == 1 && P != 1)
+            SceneManager.LoadScene("END_B_H");
+
+        if(P != 1 && B == 1 && H != 1)
+            SceneManager.LoadScene("END_B");
+
+        if(P == 1 && B != 1 && H != 1)
+            SceneManager.LoadScene("END_P");
+
+        if(P != 1 && B != 1 && H == 1)
+            SceneManager.LoadScene("END_H");
+
+        if(P == 1 && B != 1 && H == 1)
+            SceneManager.LoadScene("END_P_H");
+
+        if (P != 1 && B != 1 && H != 1)
+            SceneManager.LoadScene("END");
     }
 }

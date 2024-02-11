@@ -12,6 +12,7 @@ TagManager:
   - Tobira
   - Sibafu
   - Rock
+  - Item
   layers:
   - Default
   - TransparentFX

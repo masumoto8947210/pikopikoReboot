@@ -22,7 +22,7 @@ public class Change2 : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Stage3");
-            Debug.Log("ChangeScene");
+           
         }
     }
 }

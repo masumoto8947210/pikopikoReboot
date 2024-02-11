@@ -428,7 +428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48011530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.5, y: 12.03, z: -3.369999}
+  m_LocalPosition: {x: -2.99, y: 12.03, z: -3.369999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -448,8 +448,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 324242152}
-  minPosition: {x: 5.9, y: 12.03}
-  maxPosition: {x: 25, y: 50}
+  minPosition: {x: 0.2, y: 12.03}
+  maxPosition: {x: 25.5, y: 50}
 --- !u!1001 &49504711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1263,7 +1263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324242147}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.5, y: 15.5, z: 20.03}
+  m_LocalPosition: {x: -24.9, y: 0.2, z: 20.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1294,7 +1294,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324242147}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5970e9cf9f881f498b86ec3cb2bc390, type: 3}
   m_Name: 
@@ -1311,14 +1311,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324242147}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 684df18ba3a90f84cab6319bd9616b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3
   gravity: 10
   jumpSpeed: 3
+  highjumpSpeed: 0
+  lowjumpSpeed: 0
   jumpHeight: 3
   jumpLimitTime: 2
   highjumpHeight: 5
@@ -1334,6 +1336,18 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   jumpCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  highjumpCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  lowjumpCurve:
     serializedVersion: 2
     m_Curve: []
     m_PreInfinity: 2
@@ -3163,7 +3177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565631663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.8, y: 15, z: 21.08925}
+  m_LocalPosition: {x: 50.64, y: 15, z: 21.08925}
   m_LocalScale: {x: 1.9, y: 7.07, z: 5.71}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3341,7 +3355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.11000061
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3349,7 +3363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.79999924
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5f563905403c2e643a863aeb42327178, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4017,7 +4031,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1924306358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.8, y: 0.08, z: 21.08925}
+  m_LocalPosition: {x: -26.1, y: 0.08, z: 21.08925}
   m_LocalScale: {x: 1.9, y: 7.07, z: 5.71}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4076,7 +4090,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fa519703c5a2ac64daabc199272b0b9d, type: 2}
+  - {fileID: 2100000, guid: dc9f96fce6cc7f249b3877dc99c31d5f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4114,8 +4128,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960846509}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.600002, y: 12.35, z: 22.8}
-  m_LocalScale: {x: 200, y: 100, z: 1}
+  m_LocalPosition: {x: 9.5, y: 15.8, z: 22.8}
+  m_LocalScale: {x: 90, y: 50, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

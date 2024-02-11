@@ -10,7 +10,7 @@ public class S1ChangeScene : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Stage2");
-            Debug.Log("ChangeScene");
+           
         }
     }
 }

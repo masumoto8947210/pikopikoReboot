@@ -16,7 +16,7 @@ public class GOGame : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene("Starge1");
+            SceneManager.LoadScene("Stage1");
         }
     }
 

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditorInternal;
+
 
 public class Houseki1 : MonoBehaviour
 {

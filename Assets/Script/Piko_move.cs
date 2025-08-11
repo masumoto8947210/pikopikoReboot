@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Piko_move : MonoBehaviour
+public class Piko_move : MonoBehaviour  
 {
-    [Header("�ړ����x")] public float speed;
-    [Header("�d��")] public float gravity;
-    [Header("�W�����v���x")] public float jumpSpeed;
-    [Header("��W�����v���x")] public float highjumpSpeed;
-    [Header("���W�����v���x")] public float lowjumpSpeed;
-    [Header("�W�����v���鍂��")] public float jumpHeight;
-    [Header("�W�����v���钷��")] public float jumpLimitTime;
-    [Header("��W�����v���鍂��")] public float highjumpHeight;
-    [Header("��W�����v���钷��")] public float highjumpLimitTime;
-    [Header("���W�����v���鍂��")] public float lowjumpHeight;
-    [Header("���W�����v���钷��")] public float lowjumpLimitTime;
-    [Header("�ڒn����")] public GroundCheck ground;
-    [Header("�V�䔻��")] public GroundCheck head;
-    [Header("�_�b�V���̑����\��")] public AnimationCurve dashCurve;
-    [Header("�W�����v�̑����\��")] public AnimationCurve jumpCurve;
-    [Header("��W�����v�̑����\��")] public AnimationCurve highjumpCurve;
-    [Header("�W�����v�̑����\��")] public AnimationCurve lowjumpCurve;
-    [Header("���݂�����̍����̊���(%)")] public float stepOnRate;
+    [SerializeField] public float speed;
+    [SerializeField] public float gravity;
+    [SerializeField] public float jumpSpeed;
+    [SerializeField] public float highjumpSpeed;
+    [SerializeField] public float lowjumpSpeed;
+    [SerializeField] public float jumpHeight;
+    [SerializeField] public float jumpLimitTime;
+    [SerializeField] public float highjumpHeight;
+    [SerializeField] public float highjumpLimitTime;
+    [SerializeField] public float lowjumpHeight;
+    [SerializeField] public float lowjumpLimitTime;
+    [SerializeField] public GroundCheck ground;
+    [SerializeField] public GroundCheck head;
+    [SerializeField] public AnimationCurve dashCurve;
+    [SerializeField] public AnimationCurve jumpCurve;
+    [SerializeField] public AnimationCurve highjumpCurve;
+    [SerializeField] public AnimationCurve lowjumpCurve;
+    [SerializeField] public float stepOnRate;
 
     private Animator anim = null;
     private Rigidbody rb = null;
@@ -41,14 +41,14 @@ public class Piko_move : MonoBehaviour
     private float dashTime = 0.0f;
     private float jumpTime = 0.0f;
     private float beforeKey = 0.0f;
-    // Start is called before the first frame update
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         boxcol = GetComponent<BoxCollider>();
     }
 
-    // Update is called once per frame
+
     void FixedUpdate()
     {
         isGround = ground.IsGround();
@@ -126,7 +126,7 @@ public class Piko_move : MonoBehaviour
                 isGrab = false;
             }
         }
-        //�n�ʂɂ���Ƃ�
+   
         else if (isGround || isGrabJump)
         {
             isHighJump = false;
@@ -148,8 +148,7 @@ public class Piko_move : MonoBehaviour
       
             }
         }
-        //�W�����v��
-
+        
 
 
         if (isJump)

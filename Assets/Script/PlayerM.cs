@@ -23,7 +23,7 @@ public class PlayerM : MonoBehaviour
     void Update()
     {
     //    if (script.RMoving == true || script.LMoving == true)
-      //      StartCoroutine("Wait"); //ƒRƒ‹[ƒ`ƒ“u¼v
+      //      StartCoroutine("Wait"); //ï¿½Rï¿½ï¿½ï¿½[ï¿½`ï¿½ï¿½ï¿½uï¿½ï¿½ï¿½v
 
 
        // if (Input.GetKeyDown("o"))
@@ -33,13 +33,13 @@ public class PlayerM : MonoBehaviour
 
             if (PMove)
         {
-            // ¶‰E‚ÌˆÚ“®
+            // ï¿½ï¿½ï¿½Eï¿½ÌˆÚ“ï¿½
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
-            Vector3 movement = new Vector3(horizontalInput * moveSpeed, rb.velocity.y, verticalInput * moveSpeed);
-            rb.velocity = movement;
+            Vector3 movement = new Vector3(horizontalInput * moveSpeed, rb.linearVelocity.y, verticalInput * moveSpeed);
+            rb.linearVelocity = movement;
 
-            // ƒWƒƒƒ“ƒv
+            // ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½v
             if (isGrounded && Input.GetButtonDown("Jump"))
             {
                 rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -52,7 +52,7 @@ public class PlayerM : MonoBehaviour
 
 void OnCollisionEnter(Collision collision)
 {
-    // ’n–Ê‚ÉG‚ê‚½‚çƒWƒƒƒ“ƒv‰Â”\‚É‚·‚é
+    // ï¿½nï¿½Ê‚ÉGï¿½ê‚½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Â”\ï¿½É‚ï¿½ï¿½ï¿½
     if (collision.gameObject.CompareTag("Ground"))
     {
         isGrounded = true;
@@ -61,7 +61,7 @@ void OnCollisionEnter(Collision collision)
 
 void OnCollisionExit(Collision collision)
 {
-    // ’n–Ê‚©‚ç—£‚ê‚½‚çƒWƒƒƒ“ƒv•s‰Â‚É‚·‚é
+    // ï¿½nï¿½Ê‚ï¿½ï¿½ç—£ï¿½ê‚½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½sï¿½Â‚É‚ï¿½ï¿½ï¿½
     if (collision.gameObject.CompareTag("Ground"))
     {
         isGrounded = false;

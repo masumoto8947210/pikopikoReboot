@@ -7,7 +7,7 @@ public class RockMove : MonoBehaviour
     private Vector3 originalPosition;
     private Rigidbody rb;
     public bool PlayerTouch = false;
-    public float additionalGravity = 10f; // ’Ç‰Á‚Ìd—Í‚Ì‹­‚³
+    public float additionalGravity = 10f; // ï¿½Ç‰ï¿½ï¿½Ìdï¿½Í‚Ì‹ï¿½ï¿½ï¿½
     private Vector3 firstPosition;
     public float maxResetPosition;
     public float minResetPosition;
@@ -26,8 +26,8 @@ public class RockMove : MonoBehaviour
 
         if (Vector3.Distance(originalPosition, transform.position) >= maxDistance)
         {
-            // ˆÚ“®’†‚©‚Âˆê’è‚Ì‹——£ˆÚ“®‚µ‚½‚ç•¨—‰‰ŽZ‚ð’âŽ~
-            rb.velocity = Vector3.zero;
+            // ï¿½Ú“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âˆï¿½ï¿½Ì‹ï¿½ï¿½ï¿½ï¿½Ú“ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç•¨ï¿½ï¿½ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½~
+            rb.linearVelocity = Vector3.zero;
             rb.angularVelocity = Vector3.zero;
         }
        if (Mathf.Abs(transform.position.y - originalPosition.y ) >= GravityDistance )
@@ -37,7 +37,7 @@ public class RockMove : MonoBehaviour
 
         Vector2 currentPlayerPosition = new Vector2(player.transform.position.x, player.transform.position.y);
 
-        //ResetPositionŠO‚Éo‚é‚ÆˆÊ’u‰Šú‰»
+        //ResetPositionï¿½Oï¿½Éoï¿½ï¿½ÆˆÊ’uï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
        if (currentPlayerPosition.x > maxResetPosition || currentPlayerPosition.x < minResetPosition) 
        transform.position = firstPosition;
 

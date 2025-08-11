@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class Piko_move : MonoBehaviour
 {
-    [Header("ˆÚ“®‘¬“x")] public float speed;
-    [Header("d—Í")] public float gravity;
-    [Header("ƒWƒƒƒ“ƒv‘¬“x")] public float jumpSpeed;
-    [Header("‘åƒWƒƒƒ“ƒv‘¬“x")] public float highjumpSpeed;
-    [Header("¬ƒWƒƒƒ“ƒv‘¬“x")] public float lowjumpSpeed;
-    [Header("ƒWƒƒƒ“ƒv‚·‚é‚‚³")] public float jumpHeight;
-    [Header("ƒWƒƒƒ“ƒv‚·‚é’·‚³")] public float jumpLimitTime;
-    [Header("‘åƒWƒƒƒ“ƒv‚·‚é‚‚³")] public float highjumpHeight;
-    [Header("‘åƒWƒƒƒ“ƒv‚·‚é’·‚³")] public float highjumpLimitTime;
-    [Header("¬ƒWƒƒƒ“ƒv‚·‚é‚‚³")] public float lowjumpHeight;
-    [Header("¬ƒWƒƒƒ“ƒv‚·‚é’·‚³")] public float lowjumpLimitTime;
-    [Header("Ú’n”»’è")] public GroundCheck ground;
-    [Header("“Vˆä”»’è")] public GroundCheck head;
-    [Header("ƒ_ƒbƒVƒ…‚Ì‘¬‚³•\Œ»")] public AnimationCurve dashCurve;
-    [Header("ƒWƒƒƒ“ƒv‚Ì‘¬‚³•\Œ»")] public AnimationCurve jumpCurve;
-    [Header("‘åƒWƒƒƒ“ƒv‚Ì‘¬‚³•\Œ»")] public AnimationCurve highjumpCurve;
-    [Header("ƒWƒƒƒ“ƒv‚Ì‘¬‚³•\Œ»")] public AnimationCurve lowjumpCurve;
-    [Header("“¥‚İ‚Â‚¯”»’è‚Ì‚‚³‚ÌŠ„‡(%)")] public float stepOnRate;
+    [Header("ï¿½Ú“ï¿½ï¿½ï¿½ï¿½x")] public float speed;
+    [Header("ï¿½dï¿½ï¿½")] public float gravity;
+    [Header("ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½x")] public float jumpSpeed;
+    [Header("ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½x")] public float highjumpSpeed;
+    [Header("ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½x")] public float lowjumpSpeed;
+    [Header("ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é‚ï¿½ï¿½")] public float jumpHeight;
+    [Header("ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é’·ï¿½ï¿½")] public float jumpLimitTime;
+    [Header("ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é‚ï¿½ï¿½")] public float highjumpHeight;
+    [Header("ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é’·ï¿½ï¿½")] public float highjumpLimitTime;
+    [Header("ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é‚ï¿½ï¿½")] public float lowjumpHeight;
+    [Header("ï¿½ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½ï¿½é’·ï¿½ï¿½")] public float lowjumpLimitTime;
+    [Header("ï¿½Ú’nï¿½ï¿½ï¿½ï¿½")] public GroundCheck ground;
+    [Header("ï¿½Vï¿½ä”»ï¿½ï¿½")] public GroundCheck head;
+    [Header("ï¿½_ï¿½bï¿½Vï¿½ï¿½ï¿½Ì‘ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½")] public AnimationCurve dashCurve;
+    [Header("ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Ì‘ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½")] public AnimationCurve jumpCurve;
+    [Header("ï¿½ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Ì‘ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½")] public AnimationCurve highjumpCurve;
+    [Header("ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½Ì‘ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½")] public AnimationCurve lowjumpCurve;
+    [Header("ï¿½ï¿½ï¿½İ‚Â‚ï¿½ï¿½ï¿½ï¿½ï¿½Ìï¿½ï¿½ï¿½ï¿½ÌŠï¿½ï¿½ï¿½(%)")] public float stepOnRate;
 
     private Animator anim = null;
     private Rigidbody rb = null;
@@ -57,7 +57,7 @@ public class Piko_move : MonoBehaviour
         float ySpeed = GetYSpeed();
 
 
-        rb.velocity = new Vector3(xSpeed, ySpeed, 0.0f);
+        rb.linearVelocity = new Vector3(xSpeed, ySpeed, 0.0f);
     }
     private float GetYSpeed()
     {
@@ -126,7 +126,7 @@ public class Piko_move : MonoBehaviour
                 isGrab = false;
             }
         }
-        //’n–Ê‚É‚¢‚é‚Æ‚«
+        //ï¿½nï¿½Ê‚É‚ï¿½ï¿½ï¿½Æ‚ï¿½
         else if (isGround || isGrabJump)
         {
             isHighJump = false;
@@ -148,7 +148,7 @@ public class Piko_move : MonoBehaviour
       
             }
         }
-        //ƒWƒƒƒ“ƒv’†
+        //ï¿½Wï¿½ï¿½ï¿½ï¿½ï¿½vï¿½ï¿½
 
 
 
